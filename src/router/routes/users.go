@@ -24,4 +24,14 @@ var UsersRoutes = []Route{
 		Method: http.MethodGet,
 		Handle: userController.FindById,
 	},
+	{
+		Uri:    "/:id",
+		Method: http.MethodPut,
+		Handle: userController.Update,
+	},
+	{
+		Uri:    "/:id",
+		Method: http.MethodDelete,
+		Handle: userController.Delete,
+	},
 }

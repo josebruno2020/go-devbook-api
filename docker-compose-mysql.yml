@@ -1,0 +1,14 @@
+version: '3.3'
+services:
+  db:
+    image: mysql:latest
+    # restart: always
+    environment:
+      MYSQL_DATABASE: 'devbook'
+      MYSQL_USER: 'app'
+      MYSQL_PASSWORD: 'app_pass'
+      MYSQL_ROOT_PASSWORD: 'root'
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
